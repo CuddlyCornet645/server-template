@@ -11,12 +11,12 @@
 # Forums: http://www.spigotmc.org/
 
 messages:
-  whitelist: You are not whitelisted on this server!
-  unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full!
-  outdated-client: Outdated client! Please use {0}
-  outdated-server: Outdated server! I'm still on {0}
-  restart: Server is restarting
+  whitelist: §c§lDu bist nicht auf der Whitelist!\\n§r§7Melde dies bitte Jannick
+  unknown-command: Unbekannter Befehl! Schreibe /help.
+  server-full: Der Server ist voll!
+  outdated-client: 'Zu Alte Version! Server Version: {0}'
+  outdated-server: 'Zu neue Version! Server Version: {0}'
+  restart: §c§lDer Server Startet neué\\n§r§lVersuche es nochmals in einer Minute.
 settings:
   bungeecord: false
   save-user-cache-on-stop-only: false
@@ -140,30 +140,30 @@ world-settings:
       display: 128
       other: 64
     ticks-per:
-      hopper-transfer: 8
+      hopper-transfer: 2
       hopper-check: 8
     hopper-amount: 1
     hopper-can-load-chunks: false
     dragon-death-sound-radius: 0
-    seed-village: 10387312
-    seed-desert: 14357617
-    seed-igloo: 14357618
-    seed-jungle: 14357619
-    seed-swamp: 14357620
-    seed-monument: 10387313
-    seed-shipwreck: 165745295
-    seed-ocean: 14357621
-    seed-outpost: 165745296
-    seed-endcity: 10387313
-    seed-slime: 987234911
-    seed-nether: 30084232
-    seed-mansion: 10387319
-    seed-fossil: 14357921
-    seed-portal: 34222645
-    seed-ancientcity: 20083232
-    seed-trailruins: 83469867
-    seed-trialchambers: 94251327
-    seed-buriedtreasure: 10387320
+    seed-village: default
+    seed-desert: default
+    seed-igloo: default
+    seed-jungle: default
+    seed-swamp: default
+    seed-monument: default
+    seed-shipwreck: default
+    seed-ocean: default
+    seed-outpost: default
+    seed-endcity: default
+    seed-slime: default
+    seed-nether: default
+    seed-mansion: default
+    seed-fossil: default
+    seed-portal: default
+    seed-ancientcity: default
+    seed-trailruins: default
+    seed-trialchambers: default
+    seed-buriedtreasure: default
     seed-mineshaft: default
     seed-stronghold: default
     hunger:
