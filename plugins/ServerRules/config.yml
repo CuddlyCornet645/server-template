@@ -1,0 +1,25 @@
+#put rules in the '<rules>' to add more rules add new line and put - '<rules>'
+#color code usage "&"
+rules:
+  - '&f----- Regeln -----'
+  - '1. &7Kein Hacking!'
+  - '2. &7Kein X-Ray!'
+  - '3. &7Keine Client Modifikationen!'
+  - '4. &7Kein Spamming!'
+  - '5. &7Kein töten von Villagern!'
+  - '6. &7Kein Abuse von Rechten!'
+  - '7. &7Kein Fluchen!'
+  - '8. &7Kein Combat Logging!'
+  
+
+
+
+#enable or disable the permissions
+permissionsEnabled: true
+
+#change if cooldown for /rules is enabled and change its message
+#change the cooldown time (in seconds)
+cooldown:
+  enabled: false
+  message: '&cCommand on Cooldown Please Wait &4{TIME} &cSecond(s)!'
+  time: 10

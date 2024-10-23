@@ -1,0 +1,57 @@
+# dont change this value!
+version: 1
+
+# chat guide:
+# "local" - Technical chat name.
+# "symbol" - The character from which the message to be sent to this chat begins.
+# (If you can write to the chat without specifying a character before the message - "symbol" line should be removed)
+# "enabled" - Whether this chat is enabled for use.
+# "format" - The format of the message that appears in this chat. Supports plain colors (&7) and HEX colors (&#ffffff).
+# "range" - Chat message radius. 0+ - normal range, -1 - player's world, -2 - all worlds.
+# "permission" - The right that is required to see and post to this chat.
+# "cooldown" - Cooldown for chat. This line can be omitted, then there will be no cooldown.
+chats:
+  local:
+    enabled: true
+    format: "&7{player}&7 » &f{message}"
+    range: -2
+    permission: chatless.chat.local
+  global:
+    enabled: true
+    symbol: "!"
+    format: "&#aabbddUmgebung (150) &7{player}&8 » &7{message}"
+    range: 150
+    permission: chatless.chat.global
+    cooldown: 1
+
+join-quit-messages: true
+
+# Default personal settings values
+default-settings:
+  autopoint: false
+  autoupper: false
+  filterswear: true
+
+# Language settings
+pm:
+  format-recipient: "&7{sender} &7🠒 &7&lDu&r&8 » &e{message}"
+  format-sender: "&7&lDu &r&7🠒 &7{recipient}&8 » &e{message}"
+
+messages:
+  chat-not-exists: "&#cc4343We haven't found the right chat for you."
+  cooldown-message: "&#cc4343Chat is cooldown! Wait a moment before the next message."
+  pm-usage: "&#aabbddBenutze /pm <player> <message>"
+  pm-player-not-found: "&#cc4343The specified recipient was not found!"
+  reply-usage: "&#aabbddBenutze /reply <message>"
+  reply-no-recipients: "&#cc4343No messages have been sent to you in the last 5 minutes."
+  reply-player-offline: "&#cc4343The player you tried to reply to is offline."
+  spy-on: "&#aabbddSpy enabled!"
+  spy-off: "&#aabbddSpy disabled!"
+  spy-format: "&#aabbddSPY | {chat}"
+  join-message: "&7[&2+&7] &f{player}&7 hat den Server betreten!"
+  quit-message: "&7[&4-&7] &f{player}&7 hat den Server verlassen."
+  settings-gui-autopoint: "Punkt am ende von Nachrichten."
+  settings-gui-autoupper: "Grossbuchstaben am Start eines Satzes"
+  settings-gui-filterswear: "Fluch-Filter"
+  settings-gui-name: "Chat Einstellungen"
+  mute-message: "&4Du bist Gemutet!"

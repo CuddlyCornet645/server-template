@@ -1,0 +1,186 @@
+# Do you want to change the plugin settings?
+settings:
+  # Whether the player should receive information about new plugin updates upon joining the server
+  shouldReceivePluginUpdates: true
+  # The duration of combat in seconds
+  combatDuration: 20s
+  # List of worlds to ignore
+  worldsToIgnore:
+  - your_world
+  # List of regions to block
+  blockedRegions:
+  - null
+  # Set the knock multiplier for the blocked region
+  blockedRegionKnockMultiplier: 0.0
+  # Set the radius of the blocked region if you aren't using WorldGuard basen on default spawn region!
+  blockedRegionRadius: 0
+  # Release attacker after victim dies?
+  shouldReleaseAttacker: true
+  # If you want to exclude admins from combat, 
+  # Setting this to true - admins cannot be tagged and will not tag other players on hit
+  # Setting this to false - admins can be tagged and can tag other players on hit
+  excludeAdminFromCombat: true
+  # Command blocking mode, available modes: WHITELIST, BLACKLIST
+  commandBlockingMode: WHITELIST
+  # List of commands based on the mode above
+  # Based on BLACKLIST mode, all commands in the list are blocked, and all others are allowed
+  # Based on WHITELIST mode, all commands in the list are allowed, and all others are blocked
+  blockedCommands:
+  - squaremap
+  # Block the use of elytra?
+  shouldPreventElytraUsage: true
+  # Block flying? (flying players will fall to the ground)
+  shouldPreventFlying: true
+  # Disable the use of elytra on damage?
+  shouldElytraDisableOnDamage: true
+  # Block the opening of inventory?
+  shouldPreventInventoryOpening: false
+  # Whether to block the placement of blocks?
+  shouldPreventBlockPlacing: false
+  # Block the placement of blocks above or below a certain Y coordinate
+  # Select the mode for block placing, available modes: ABOVE, BELOW
+  blockPlacingMode: ABOVE
+  # Block placing mode custom name used if messages
+  blockPlacingModeName: above
+  # Set the Y coordinate for block placing relative to mode selected above
+  blockPlacingYCoordinate: 40
+  # Disable placing specific blocks?
+  # If you want to block all blocks, enable shouldPreventBlockPlacing and make this list empty
+  # If you want to disable placing only specific blocks, enable shouldPreventBlockPlacing and add blocks to this list above
+  # If you want to disable this feature completely, disable shouldPreventBlockPlacing option above
+  specificBlocksToPreventPlacing: []
+  # Do You want to enable combat log for non-player causes of damage? - Set to false to disable
+  shouldEnableDamageCauses: false
+  # Select the mode for damage causes, available modes: WHITELIST, BLACKLIST
+  damageCausesMode: WHITELIST
+  # After selecting the mode above, select the causes of damage to be logged
+  # You can find a list of all causes here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  # While using Whitelist mode the player will get a combat log after the damage from the list below
+  # While using Blacklist mode the player will get a combat log after any damage non-listed below
+  damageCausesToLog:
+  - LAVA
+  - CONTACT
+  - FIRE
+  - FIRE_TICK
+  # After what type of projectile entity should not tag the player as fighter?
+  # You can find a list of all entity types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+  disabledProjectileEntities:
+  - ENDER_PEARL
+#  
+# Ender pearl settings
+pearl:
+  # Is pearl damage to be enabled?
+  # This will work globally
+  pearlThrowDamageEnabled: true
+  # Set true, If you want to lock pearls during the combat
+  pearlThrowBlocked: false
+  # Block throwing pearls with delay?
+  # If you set this to for example 3s, player will have to wait 3 seconds before throwing another pearl
+  # Set to 0 to disable
+  pearlThrowDelay: 5s
+  # Message sent when player tries to throw ender pearl, but are disabled
+  pearlThrowBlockedDuringCombat: '&cDu darfst bei einem Kampf nicht weg Perlen!'
+  # Message sent when player tries to throw ender pearl, but has delay
+  pearlThrowBlockedDelayDuringCombat: '&cWarte noch {TIME} bevor du noch eine Perle
+    wirfst!'
+#  
+# Custom effects settings
+effect:
+  # Do you want to add effects to players in combat?
+  customEffectsEnabled: false
+  # If the option above is set to true, you can add effects to players in combat below
+  # You can find a list of all potion effects here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+  # Correct format: 'EFFECT_TYPE:AMPLIFIER' Amplifier strength starts from 0, so level 1 gives effect strength 2
+  # Example: SPEED:1, DAMAGE_RESISTANCE:0
+  customEffects:
+    DAMAGE_RESISTANCE: 0
+    SPEED: 1
+#  
+# Set a custom way for a player's items to drop on death (if in combat)
+dropSettings:
+  # UNCHANGED - The default way of item drop defined by the engine
+  # PERCENT - Drops a fixed percentage of items
+  # PLAYERS_HEALTH - Drops inverted percentage of the player's health (i.e. if the player has, for example, 80% HP, he will drop 20% of items. Only works when the player escapes from combat by quiting game)
+  dropType: UNCHANGED
+  # What percentage of items should drop from the player? (Only if Drop Type is set to PERCENT)
+  dropItemPercent: 100
+  # This option is responsible for the lowest percentage of the player that can drop (i.e. if the player leaves the game while he has 100% of his HP, the percentage of items that is set in this option will drop, if you set this option to 0, then nothing will drop from such a player)
+  playersHealthPercentClamp: 20
+  # Does the drop modification affect the experience drop?
+  affectExperience: false
+#  
+# Do you want to change the plugin messages?
+messages:
+  # Do you want to change the admin messages?
+  admin:
+    # Message sent when the configuration is reloaded
+    reload: '&aConfiguration has been successfully reloaded!'
+    # Message sent when console tries to use a command that is only for players
+    onlyForPlayers: '&cThis command is only available to players!'
+    # Message sent to admin when they tag a player
+    adminTagPlayer: '&7Du hast &e{PLAYER}&r&7 berührt!'
+    # Message sent when a player is tagged by an admin
+    adminTagMultiplePlayers: '&7Du hast &e{FIRST_PLAYER}&7 und &e{SECOND_PLAYER}&7
+      berührt!'
+    # Message sent to admin when they remove a player from combat
+    adminUntagPlayer: '&e{PLAYER}&7 wurde vom Kampf entfernt!.'
+    # Message sent when the player is not in combat
+    adminPlayerNotInCombat: '&c{PLAYER} ist nicht im Kampf!'
+    # Message sent when the player is in combat
+    playerInCombat: '&c{PLAYER} ist im Kampf!'
+    # Message sent when a player is not in combat
+    playerNotInCombat: '&a{PLAYER} ist momentan nicht im Kampf!'
+    # Message sent when an admin tries to tag themselves
+    adminCannotTagSelf: '&cDu kannst nicht mit dir selber Kämpfen! '
+    # Message sent when an admin disables the ability to get tagged for some time
+    adminTagOutSelf: '&7Du bist nicht mehr berürbahr, in &e{TIME}&7 bist du es aber
+      wieder!'
+    # Message sent when an admin disables the ability to get tagged for some time for other player
+    adminTagOut: '&7Successfully disabled tag for &e{PLAYER}! They will be taggable
+      after &e{TIME} '
+    # Message sent to the player whom the ability to get tagged for some time has been disabled
+    playerTagOut: '&7You will be taggable in &e{TIME} !'
+    # Message sent when an admin reenables the ability to get tagged for the player
+    adminTagOutOff: '&7Successfully enabled tag for &e{PLAYER}!'
+    # Message sent to the player whom the ability to get tagged has been reenabled
+    playerTagOutOff: '&7You are now taggable!'
+    # Message sent when player cannot be tagged because they have enabled tag-out
+    adminTagOutCanceled: '&cCannot tag this player due to tag-out!'
+  #  
+  # Combat log notification
+  # You can use {TIME} variable to display the time left in combat
+  # Notification types: CHAT, ACTION_BAR, TITLE, SUB_TITLE, BOSS_BAR
+  #  
+  # BossBar progress: This is the value of the progress bar. Set it to -1.0 to show the remaining combat time
+  # BossBar colors: https://javadoc.io/static/net.kyori/adventure-api/4.14.0/net/kyori/adventure/bossbar/BossBar.Color.html
+  # BossBar overlays: https://javadoc.io/static/net.kyori/adventure-api/4.14.0/net/kyori/adventure/bossbar/BossBar.Overlay.html
+  combatNotification:
+    type: BOSS_BAR
+    message: '&cKampf endet in &f&l{TIME}'
+    progress: 1.0
+    color: RED
+    overlay: PROGRESS
+  # Message sent when the player does not have permission to perform a command
+  noPermission: '&cDu darfst das nicht!'
+  # Message sent when the specified player could not be found
+  playerNotFound: '&cThe specified player could not be found!'
+  # Message sent when the player enters combat
+  playerTagged: '&cVERLASSE DEN SERVER NICHT! DU BIST IN EINEM KAMPF!'
+  # Message sent when the player leaves combat
+  playerUntagged: '&aDu bist nicht mehr im Kampf!'
+  # This is broadcast when the player is in combat and logs out
+  playerLoggedOutDuringCombat: '&c{PLAYER} hat sich beim Kampf ausgeloggt! LOL'
+  # Message sent when the player is in combat and tries to use a disabled command
+  # you can configure the list of disabled commands in the blockedCommands section of the config.yml file
+  commandDisabledDuringCombat: '&cDu bist noch in einem Kampf!'
+  # Message sent when player tries to use a command with invalid arguments
+  invalidCommandUsage: '&7Correct usage: &e{USAGE}'
+  # Message sent when player tries to open inventory, but the inventory open is blocked
+  inventoryBlockedDuringCombat: '&cYou cannot open this inventory during combat!'
+  # Message sent when player tries to place a block, but the block place is blocked
+  # Placeholder {Y} is replaced with the Y coordinate set in the config
+  # Placeholder {MODE} is replaced with the mode set in the config
+  blockPlacingBlockedDuringCombat: '&cYou cannot place {MODE} {Y} coordinate during
+    combat!'
+  # Message sent when player tries to enter a region
+  cantEnterOnRegion: '&cYou can''t enter on this region during combat!'

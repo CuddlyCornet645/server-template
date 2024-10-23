@@ -1,0 +1,66 @@
+laser:
+  duration: 30.0
+  beamStartFrames: 4.0
+  beamEndFrames: 16.0
+  randomnessMagnitude: 0.5
+  randomnessPeriod: 12.0
+  flySpeed: 7.199999999999999
+  beamWidth: 0.8
+  glowWidthMin: 0.7000000000000001
+  glowWidthMax: 1.3
+  glowPeriod: 3.0
+  applyNightVision: true
+  boreRadius: 3.0
+  boreBurnRadius: 5.0
+  boreDistance: 50.0
+  burn:
+    disabled: false
+    setFireChance: 0.0125
+    spawnSmokeChance: 0.2
+    palette: ORANGE
+  shockwave:
+    count: 120.0
+    cameraShake:
+      magnitude: 1.2
+      decay: 0.04
+      pitchPeriod: 3.7
+      yawPeriod: 3.0
+    destructionRadius: 3.8
+    destructionCurve: 3.0
+    destructionRange: 20.0
+    flyingBlockChance: 0.1
+    flyingBlockMinVelocity: 3.24
+    flyingBlockMaxVelocity: 3.5999999999999996
+    size: 0.1
+    growth: 0.125
+    duration: 80.0
+    speed: 3.2
+    scanUpwards: 15.0
+    markDestroyedBlocks: false
+  burnWave:
+    count: 20.0
+    delayedCount: 90.0
+    durationMin: 80.0
+    durationMax: 160.0
+    maxSpawnDelay: 35.0
+    spawnRandomInterval: 5.0
+    growth: 0.25
+    size: 0.1
+    burnBlocks: 4.0
+    speedMin: 0.75
+    speedMax: 0.8250000000000001
+    palette: ORANGE
+    scanUpwards: 25.0
+    scanDownwards: 0.0
+    airDragCoefficient: 0.005
+    disableHeat: false
+  flashBurn:
+    horizontalCount: 40.0
+    verticalCount: 10.0
+    verticalMinAngle: -0.9424777960769379
+    verticalMaxAngle: 0.9424777960769379
+    rayDistance: 100.0
+    debugDuration: 0.0
+  explodePlacementOffset: 2.0
+  flashBurnPlacementOffset: 5.0
+  digDepth: 1.0

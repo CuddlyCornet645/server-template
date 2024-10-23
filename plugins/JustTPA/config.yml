@@ -1,0 +1,61 @@
+# Check for updates on startup, this uses the modrinth api to get the newest version for your server.
+check-for-updates: true
+messages:
+  prefix: §8[§6TPA§8] §7
+  reloaded: Configuration has been reloaded.
+  usages:
+    tpa: 'Verwendung: /tpa <spieler>'
+    tpahere: 'Verwendung: /tpahere <spieler>'
+    tpaccept: 'Verwendung: /tpaccept, um die letzte Teleportanfrage anzunehmen, oder
+      /tpaccept <spieler>, um eine spezifische Teleportanfrage anzunehmen.'
+  errors:
+    player-required: Du musst ein Spieler sein, um diesen Befehl zu verwenden. HOI
+      JANNICK DU CONSOLE ABUSER!!!
+    player-not-found: Spieler nicht gefunden.
+    player-self-request: Du kannst dir selbst keine Teleportanfrage senden.
+    request-pending: Du hast bereits eine ausstehende Anfrage.
+    request-not-found: Du hast keine ausstehende Anfrage.
+    return-not-found: Du hast keinen Ort, zu dem du zurückkehren kannst, oder die
+      Zeit ist abgelaufen.
+    request-not-found-by: Du hast keine ausstehende Anfrage von %playername%.
+    cooldown: Du musst %seconds% Sekunden warten, bevor du eine weitere Teleportanfrage
+      senden kannst.
+  request:
+    sent: Teleportanfrage an %playername% gesendet. Du hast %seconds% Sekunden, um
+      sie anzunehmen.
+    return: Du wirst zurückgesendet.
+    received: Du hast eine Teleportationsanfrage von %playername% bekommen, welche
+      in %seconds% abläuft.
+    accept: Schreibe /tpaccept um die Anfrage zu Akteptieren.
+    deny: Schreibe /tpadeny un die Anfrage abzulehnen.
+    denied-by: Teleportation abgelehnt von %playername%.
+    denied: Du hast die Anfrage von %playername% abgelehnt.
+    warning-tpa-here: '&cWarnung:&r Wenn du diese Anfrage annimmst, wirst du zu %playername%
+      teleportiert.'
+    canceled: Teleportation abgebrochen.
+    canceled-by: Die Teleportation wurde von %playername% abgebrochen.
+    accepted: Du hast %playername%s Anfrage angenommen.
+    accepted-by: Dine Anfrage wurde von %playername% akzeptiert.
+    timeout-to: Deine Anfrage an %playername% ist abgelaufen.
+    timeout-from: Deine Anfrage an %playername% ist abgelaufen.
+    teleported-to: Du wurdest zu %playername% teleportiert.
+    teleported-from: '%playername% wurde zu dir teleportiert.'
+tpa:
+  # Time in seconds you have to accept a teleport request
+  timeout: 60
+  # Time in seconds until the return command times out. Put 0 to make it usable indefinitely.
+  return-timeout: 60
+  # Time in seconds you have to wait before you teleport (after teleport request was accepted)
+  # Any movement will cancel the teleport, 0 to disable
+  # Note: this feature is not implemented yet, teleports are currently instant.
+  wait: 5
+  # Makes the plugin spam the console with maybe useful information (more verbose)
+  verbose: false
+  cooldowns:
+    # Time in seconds you have to wait before you can send another teleport request
+    tpa: 60
+    # Time in seconds you have to wait before you can send another tpa here request
+    tpaHere: 60
+bStats:
+  # Enable bStats for this plugin
+  enabled: true
