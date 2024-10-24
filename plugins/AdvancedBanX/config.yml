@@ -71,6 +71,8 @@ ExemptPlayers:
 - 'md5'
 - 'dutchy1001'
 - 'ItzSomebody'
+- 'debianer'
+- 'M4tick'
 
 # The date-format which will be used for the %DATE% variable
 DateFormat: "MM/dd/yyyy HH:mm"

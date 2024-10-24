@@ -26,31 +26,31 @@ maintenance-enabled: false
 ping-message:
   enabled: true
   messages:
-  - <red>Currently under maintenance<br><gradient:#fbffc2:#0fffff>We will be back soon!
+  - <red>Wartungsarbeiten!<br><gradient:#fbffc2:#0fffff>Der Server ist bald wieder verfügbar.
   # If set to true and an endtimer is currently running, a message from this pool will be chosen
   # instead of the ones above, so you can have different messages for when an endtimer is running/not running.
   enable-timer-specific-messages: true
   timer-messages:
-  - <red>Currently under maintenance<br><gradient:#fbffc2:#fffff>Come back in:</gradient> <color:#aa55ee>%TIMER%
+  - <red>Wartungsarbeiten!<br><gradient:#fbffc2:#fffff>Wieder verfügbar in:</gradient> <color:#aa55ee>%TIMER%
 
 # If enabled, the message below will be shown in the top right corner of the server in the server list, where the player count would normally be displayed.
 # You can use '%ONLINE%' and '%MAX%' if you want to include the player count in a custom message (e.g. "Maintenance %ONLINE%/%MAX%").
 # DOES NOT SUPPORT RGB!
 player-count-message:
   enabled: true
-  message: <dark_red>Maintenance
+  message: <dark_red>Wartungsarbeiten!
   # If set to true and an endtimer is currently running, the timer message will be used instead of the normal one.
   enable-timer-specific-message: false
-  timer-message: '<dark_red>Come back in: <yellow>%TIMER%'
+  timer-message: '<dark_red>Wieder verfügbar in: <yellow>%TIMER%'
 
 # Is shown when you move your mouse above the text in the top right corner of the server in the server list, where the player count would normally be displayed.
 # DOES NOT SUPPORT RGB!
 player-list-hover-message:
   enabled: true
-  message: <red>Currently under<br><red>maintenance
+  message: <red>Wartungsarbeiten!<br><red>
   # If set to true and an endtimer is currently running, the timer message will be used instead of the normal one.
   enable-timer-specific-message: false
-  timer-message: <red>Come back in:<br><red><yellow>%TIMER%
+  timer-message: <red>Wieder verfügbar in:<br><red><yellow>%TIMER%
 
 # Any extra commands inside the arrays will be executed when maintenance is enabled/disabled.
 # Example: commands-on-maintenance-enable: ["say hello!", "stop"]
